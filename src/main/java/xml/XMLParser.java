@@ -27,7 +27,8 @@ public class XMLParser extends DefaultHandler {
 
 
 
-    @SuppressWarnings("ArgumentSelectionDefectChecker")
+    //@SuppressWarnings({"ArgumentSelectionDefectChecker"})
+    @SuppressWarnings("StringSplitter")
     @Override
     public void startElement(String uri, String localName,
                              String qName, Attributes atts) {

@@ -18,7 +18,7 @@ public class Player extends Character {
     private boolean running = false;
     private Timer timer;
     private AtomicInteger timeLeft;
-    private ArrayList<Room> rooms = new ArrayList<>();
+    //private ArrayList<Room> rooms = new ArrayList<>();
 
     private BinarySearchTree bst = new BinarySearchTree();
 
@@ -71,8 +71,6 @@ public class Player extends Character {
         initTimer(60);
         //Utilize switch cases rather than a series of if statements.
         do {
-
-
             System.out.println("Enter command: ");
             String txt = scanner.nextLine();
             //Give the following a try...

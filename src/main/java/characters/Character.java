@@ -21,7 +21,7 @@ public abstract class Character {
     }
 
     public Room getPreviousRoom(){
-        return (rooms.get(rooms.size()-1));
+        return rooms.get(rooms.size()-1);
     }
 
 

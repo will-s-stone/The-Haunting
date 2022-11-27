@@ -70,6 +70,9 @@ public class BinarySearchTree<Key extends Comparable<Key>, Value> implements Ite
 
     public Key remove(Key target){
         root = remove(root, target);
+        if(root.key != null) {
+            size--;
+        }
         return root.key;
         // return deleteReturn;
     }

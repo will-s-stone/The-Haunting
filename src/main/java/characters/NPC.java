@@ -1,8 +1,6 @@
 package characters;
 
 import roomsanditems.Room;
-import xml.XMLParser;
-
 import java.util.ArrayList;
 import java.util.Random;
 
@@ -12,11 +10,13 @@ public class NPC extends Character {
     private boolean flag = false;
 
     //An ArrayList for the rooms that a NPC has been in goes to ~ Add to character, make abstract.
-    private ArrayList<Room> rooms = new ArrayList<>();
+    //private ArrayList<Room> rooms = new ArrayList<>();
 
     public NPC(String name, String description, Room room) {
         super(name, description);
         this.room = room;
+        room.addCharacter(this);
+        room.addNPC(this);
         //this.rooms = rooms;
     }
 
@@ -28,6 +28,7 @@ public class NPC extends Character {
 
 
     //Check below in case of trouble...
+    @Override
     public Room getRoom() {
         return room;
     }

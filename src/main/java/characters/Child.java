@@ -7,8 +7,8 @@ import java.util.ArrayList;
 public class Child extends NPC{
     private boolean flag = false;
 
-    public Child(String description, String name, Room room) {
-        super(description, name, room);
+    public Child(String name, String description, Room room) {
+        super(name, description, room);
     }
 
 

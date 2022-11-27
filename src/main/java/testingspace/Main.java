@@ -24,7 +24,6 @@ public class Main {
     @SuppressWarnings("DefaultCharset")
     public static void main(String[] args) {
 
-
         //String file;
         SAXParserFactory spf = SAXParserFactory.newInstance();
         Scanner scanner = new Scanner(System.in);

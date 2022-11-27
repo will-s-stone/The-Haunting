@@ -1,5 +1,7 @@
 package roomsanditems;
 
+import java.lang.reflect.Array;
+
 public class Item {
     private String name, description;
     private ItemActions[] itemActions = new ItemActions[3];
@@ -36,17 +38,17 @@ public class Item {
 
 //        if(IA.equals(ItemActions.Throw)){
 //            broken = true;
-//        }
-
-        for (int i = 0; i < itemActions.length; i++) {
-
-            if (itemActions[i] == IA) {
-                System.out.println("You can't do that action :(");
-                return;
-            }
-            if (itemActions[i] == null) {
-                itemActions[i] = IA;
-                return;
+        //Guard clause to check if the item is broken.
+        if(!getItemStatus()) {
+            for (int i = 0; i < itemActions.length; i++) {
+                if (itemActions[i] == IA) {
+                    System.out.println("You can't do that action :(");
+                    return;
+                }
+                if (itemActions[i] == null) {
+                    itemActions[i] = IA;
+                    return;
+                }
             }
         }
     }
